@@ -39,12 +39,12 @@ class Main {
 
     }
 
-    fun <T> timeIt(message: String = "Runtime is", block: () -> T): T {
+    fun <T> timeIt(message: String , block: () -> T): T {
         val start = System.currentTimeMillis()
-        val r = block()
+        val runtime = block()
         val end = System.currentTimeMillis()
         println("$message: ${end - start} ms")
-        return r
+        return runtime
     }
 
 

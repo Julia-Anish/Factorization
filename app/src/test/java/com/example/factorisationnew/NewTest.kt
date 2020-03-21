@@ -2,8 +2,7 @@ package com.example.factorisationnew
 
 import org.junit.Test
 import org.junit.jupiter.api.Assertions
-import java.time.Duration
-import kotlin.system.measureNanoTime
+
 
 class NewTest {
     val newTest = Main()
@@ -16,26 +15,22 @@ class NewTest {
 
     @Test
     fun test2 () {
-        val newTest = Main()
-        Assertions.assertEquals("[11]", newTest.factor(11).contentToString())
+        Assertions.assertEquals("[11]", Main().factor(11).contentToString())
     }
 
     @Test
     fun test3 () {
-        val newTest = Main()
-        Assertions.assertEquals("[]", newTest.factor(1).contentToString())
+        Assertions.assertEquals("[]", Main().factor(1).contentToString())
     }
 
     @Test
     fun test4 () {
-        val newTest = Main()
-        Assertions.assertEquals("[3, 5, 37]", newTest.factor(555).contentToString())
+        Assertions.assertEquals("[3, 5, 37]", Main().factor(555).contentToString())
     }
 
     @Test
     fun test5 () {
-        val newTest = Main()
-        Assertions.assertEquals("[2, 7, 13, 41]", newTest.factor(7462).contentToString())
+        Assertions.assertEquals("[2, 7, 13, 41]", Main().factor(7462).contentToString())
 
     }
 
@@ -43,7 +38,7 @@ class NewTest {
     @Test
     fun runtime(){
         val newTest = Main()
-        newTest.timeIt { newTest.factor(255)}
+        newTest.timeIt("Runtime is") { newTest.factor(255)}
     }
 
 
